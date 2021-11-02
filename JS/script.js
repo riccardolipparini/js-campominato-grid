@@ -20,38 +20,41 @@ console.log(chooseDif);
 
 if(chooseDif == "facile"){
     for(i = 0; i < 100; i++){
-
-        let newElement = generaGrid("div", "grid1");
-
+        let div = generaDiv("div", "grid1");
+        // div click per cambiare colore
+        div.addEventListener("click",
+        function(){
+            div.classList.add("click");
+        }
+        );
+        mineField.append(div);
+    }
+}else if(chooseDif == "medio"){
+    for(i = 0; i < 81; i++){
+        let div = generaDiv("div", "grid2");
+        // div click per cambiare colore
+        div.addEventListener("click",
+        function(){
+            div.classList.add("click");
+        }
+        );
+        mineField.append(div);
+    }
+}else if(chooseDif == "difficile"){
+    for(i = 0; i < 49; i++){
+        let div = generaDiv("div", "grid3");
+        // div click per cambiare colore
+        div.addEventListener("click",
+        function(){
+            div.classList.add("click");
+        }
+        );
+        mineField.append(div);
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    function generaGrid(_element, _classEl){
-
-    let ok = document.createElement(_element);
-    ok.classList.add(_classEl);
-    return ok
+function generaDiv(_tag, _classEl) {
+    let element = document.createElement(_tag);
+    element.classList.add(_classEl);
+    return element
 }
