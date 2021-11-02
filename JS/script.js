@@ -14,4 +14,44 @@
 
 const mineField = document.getElementById("campominato");
 
-const chooseDif = prompt("A quale difficoltà vuoi giocare?")
+const chooseDif = prompt("A quale difficoltà vuoi giocare? scrivi facile, medio o difficile")
+console.log(chooseDif);
+
+
+if(chooseDif == "facile"){
+    for(i = 0; i < 100; i++){
+
+        let newElement = generaGrid("div", "grid1");
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function generaGrid(_element, _classEl){
+
+    let ok = document.createElement(_element);
+    ok.classList.add(_classEl);
+    return ok
+}
